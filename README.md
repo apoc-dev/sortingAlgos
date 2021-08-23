@@ -7,6 +7,7 @@ Implemented so far:
 - SelectionSort
 - BubbleSort
 - QuickSort
+- HeapSort
 
 ## Folder Structure
 

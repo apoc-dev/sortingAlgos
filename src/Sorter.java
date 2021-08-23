@@ -25,6 +25,7 @@ public abstract class Sorter {
             if(last>sorted[i]){
                 return false;
             }
+            last = sorted[i];
         }
         return true;
 

@@ -7,7 +7,7 @@ public class App {
         Random random = new Random();
 
         // prepare array to sort
-        int arrlenght = 100000;
+        int arrlenght = 10000;
         int[] toSort = new int[arrlenght];
         for (int i = 0; i < arrlenght; i++) {
             toSort[i] = random.nextInt(arrlenght);
@@ -16,6 +16,7 @@ public class App {
         System.out.println(Sorting(new SelectionSort(copyArr(toSort))));        
         System.out.println(Sorting(new BubbleSort(copyArr(toSort))));
         System.out.println(Sorting(new QuickSort(copyArr(toSort))));
+        System.out.println(Sorting(new HeapSort(copyArr(toSort))));
     }
 
     static String Sorting(Sorter sorter){

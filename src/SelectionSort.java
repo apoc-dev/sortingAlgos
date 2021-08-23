@@ -1,11 +1,8 @@
-public class SelectionSort {
-    
-    int[] unsorted;
-    int[] sorted;
+public class SelectionSort extends Sorter{
 
     SelectionSort(int[] toSort){
-        unsorted = toSort;
-        sorted = new int[toSort.length];
+        super(toSort);
+        algoName = "SelectionSort";
     }
 
     public void sort(){
@@ -34,13 +31,4 @@ public class SelectionSort {
         }
         return -1;
     }
-
-    public String toString(){
-        String str = "";
-        for (int i = 0; i < sorted.length; i++) {
-            str = str + "," + sorted[i];
-        }
-        return str;
-    }
-    
 }

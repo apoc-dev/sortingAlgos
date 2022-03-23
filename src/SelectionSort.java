@@ -6,10 +6,11 @@ public class SelectionSort extends Sorter{
     }
 
     public void sort(){
-        for (int i = 0; i < sorted.length; i++) {
-            int index = findIndex(findMin(unsorted));
-            sorted[i] = unsorted[index];
-            unsorted[index] = Integer.MAX_VALUE;
+        output = new int[input.length];
+        for (int i = 0; i < output.length; i++) {
+            int index = findIndex(findMin(input));
+            output[i] = input[index];
+            input[index] = Integer.MAX_VALUE;
         }
     }
 
@@ -24,8 +25,8 @@ public class SelectionSort extends Sorter{
     }
 
     private int findIndex(int value){
-        for (int i = 0; i < sorted.length; i++) {
-            if(unsorted[i] == value){
+        for (int i = 0; i < output.length; i++) {
+            if(input[i] == value){
                 return i;
             }
         }

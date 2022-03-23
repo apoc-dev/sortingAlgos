@@ -14,9 +14,9 @@ public class QuickSort extends Sorter{
     }
 
     public void sort(){
-        quickSort(unsorted, 0, unsorted.length-1);
+        quickSort(input, 0, input.length-1);
 
-        sorted = unsorted;
+        output = input;
     }
 
     private void quickSort(int[] arr, int low, int high){

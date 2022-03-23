@@ -7,24 +7,24 @@ public class HeapSort extends Sorter{
 
     public void sort(){
 
-        int n = unsorted.length;
+        int n = input.length;
 
         for (int i = n / 2 - 1; i >= 0; i--){
-          heapify(unsorted, n, i);
+          heapify(input, n, i);
         }
             
         for (int i = n-1; i > 0; i--) {
             
-            int largest = unsorted[0];
-            unsorted[0] = unsorted[i];
-            unsorted[i] = largest;
+            int largest = input[0];
+            input[0] = input[i];
+            input[i] = largest;
 
-            heapify(unsorted, i, 0);
+            heapify(input, i, 0);
 
         }
 
         
-        sorted = unsorted;
+        output = input;
 
     }
 

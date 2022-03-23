@@ -10,12 +10,12 @@ public class BubbleSort extends Sorter{
 
         while(!completed){
             boolean flag = false;
-            for (int i = 0; i < this.unsorted.length-1; i++) {
-                int num = unsorted[i];
+            for (int i = 0; i < this.input.length-1; i++) {
+                int num = input[i];
 
-                if(num > unsorted[i+1]){
-                    unsorted[i] = unsorted[i+1];
-                    unsorted[i+1] = num;
+                if(num > input[i+1]){
+                    input[i] = input[i+1];
+                    input[i+1] = num;
                     flag = true;
                 }
             }
@@ -23,6 +23,6 @@ public class BubbleSort extends Sorter{
                 completed = true;
             }
         }
-        sorted = unsorted;
+        output = input;
     }
 }

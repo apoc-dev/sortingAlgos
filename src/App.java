@@ -2,21 +2,24 @@ import java.util.Random;
 
 public class App {
     public static void main(String[] args) throws Exception {
-
+        
         // prepare env
         Random random = new Random();
 
         // prepare array to sort
-        int arrlenght = 10000;
+        int arrlenght = 100000;
         int[] toSort = new int[arrlenght];
         for (int i = 0; i < arrlenght; i++) {
-            toSort[i] = random.nextInt(arrlenght);
+            toSort[i] = random.nextInt(arrlenght) +1;
         }
 
+        //manuel setting
         System.out.println(Sorting(new SelectionSort(copyArr(toSort))));        
         System.out.println(Sorting(new BubbleSort(copyArr(toSort))));
         System.out.println(Sorting(new QuickSort(copyArr(toSort))));
         System.out.println(Sorting(new HeapSort(copyArr(toSort))));
+        System.out.println(Sorting(new StrandSort(copyArr(toSort))));
+
     }
 
     static String Sorting(Sorter sorter){
